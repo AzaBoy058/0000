@@ -1,0 +1,83 @@
+/* Общий стиль для текста */
+.text-container {
+    border: 1px solid #000; /* Видимая граница */
+    padding: 2cm 1cm 2cm 3cm; /* Отступы: верхний, правый, нижний, левый */
+    background-color: #f0f0f0; /* Светло-серый фон */
+    font-family: 'Times New Roman', serif; /* Гарнитура */
+    font-size: 14pt; /* Кегль */
+    text-indent: 1.5cm; /* Абзацный отступ */
+}
+
+/* Буквица */
+.text-container::first-letter {
+    font-size: 18pt; /* Размер буквицы */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Стиль для таблицы */
+table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+}
+
+th {
+    text-align: center; /* Выравнивание заголовка по центру */
+}
+
+td:first-child {
+    text-align: left; /* Первый столбец по ширине */
+}
+
+td:nth-child(odd) {
+    background-color: #fff; /* Белый фон для нечетных столбцов */
+}
+
+td:nth-child(even) {
+    background-color: #e0e0e0; /* Светлый фон для четных столбцов */
+}
+
+/* Обтекание изображения */
+.img-float {
+    float: left; /* Обтекание слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+}
+
+/* Стили для списков */
+ul.custom-list {
+    list-style-type: square; /* Квадратные маркеры */
+    padding-left: 20px; /* Отступ слева */
+}
+
+a.custom-link {
+    color: blue; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+a.custom-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Пример каскадного определения стилей */
+#main-title {
+    font-size: 24pt; /* Заголовок */
+    color: darkblue; /* Цвет заголовка */
+}
+
+#main-title .subtitle {
+    font-size: 16pt; /* Подзаголовок */
+    color: gray; /* Цвет подзаголовка */
+}
+
+/* Применение позиционирования */
+.positioned-element {
+    position: relative; /* Относительное позиционирование */
+    top: 10px; /* Смещение вниз */
+    left: 10px; /* Смещение вправо */
+}
+
+/* CSS3 пример */
+@media (max-width: 600px) {
+    .text-container {
+        background-color: #d0d0d0; /* Изменение фона для маленьких экранов */
+    }
+}

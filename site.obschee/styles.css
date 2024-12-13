@@ -1,0 +1,264 @@
+/* Общие стили */
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    display: flex; /*Элемент занимает только необходимое пространство, не создавая разрыв строки.*/
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Главная секция */
+#home {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center; /*Устанавливает выравнивание текста (left, right, center, justify).*/
+}
+
+#home h2 {
+    margin-bottom: 20px;/*Устанавливает нижний отступ */
+    color: #333;
+}
+
+/* Секция товаров */
+#products {
+    padding: 50px 0;/*устанавливает внутренние отступы/поля со всех сторон элемента.*/
+    display: flex; /*определяет, будет ли элемент рассматриваться как блочный или встроенный блок,*/
+    flex-wrap: wrap; /*определяет, будут ли элементы flex-блока располагаться в одну строку или могут переноситься на несколько строк*/
+    justify-content: center; /*определяет, как браузер распределяет пространство между элементами контента */
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 5px; /*Закругляет углы внешней границы элемента*/ 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;/*Скрывает содержимое, выходящее за границы*/
+    margin: 20px; /* определяет внешний отступ*/
+    width: 350px; /* Ширина каждого товара */
+    transition: transform 0.3s; /*Устанавливает свойства, которые будут анимированы, а также продолжительность анимации.*/
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%; /*Ширина элемента.*/
+    display: block; /*Элемент занимает всю доступную ширину.*/
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product h3 {
+    margin-top: 0;
+}
+
+.product p {
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;/*устанавливает курсор мыши, если он есть, для отображения при наведении указателя мыши на элемент.*/
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+/* Корзина */
+#cart {
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#checkout-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#checkout-button:hover {
+    background-color: #555;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Фильтры и поиск */
+#filters {
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #555;
+}
+
+#search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /*Определяет, 
+	как пространство между элементами распределяется по главной оси (например, center, space-between).*/
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none; /*Устанавливает стиль, ширину и цвет границы.*/
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #555;
+}
+
+/* Форма отправки */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/*********************************************************************************/
+/* Стили для текста с буквицей */
+.styled-text {
+    border: 1px solid black; /* Видимая граница */
+    padding: 2cm 1cm 2cm 3cm; /* Отступы: верхний 2 см, правый 1 см, нижний 2 см, левый 3 см */
+    background-color: #d3d3d3; /* Светло-серый фон */
+    font-family: 'Times New Roman', Times, serif; /* Гарнитура */
+    font-size: 14pt; /* Кегль 14pt */
+    text-indent: 1.5cm; /* Абзацный отступ 1,5 см */
+}
+
+.first-letter {
+    font-size: 18pt; /* Буквица 18pt */
+    float: left; /* Обтекание буквицы */
+    line-height: 1; /* Чтобы буквица была на одной линии с текстом */
+    margin-right: 0.1em; /* Отступ справа для буквицы */
+}

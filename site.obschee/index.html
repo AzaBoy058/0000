@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASUMA-URAL</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Интернет-магазин автозапчастей</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Товары</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#cart">Корзина (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+
+       <p id="web">Добро пожаловать!</p>
+<script>
+    let i = 0;
+    const dt = ["#0000A0", "#A00000", "#00A000", "#00A0A0", "#A000A0", "#A0A000"];
+    const sizes = [ "26px"]; // массив размеров текста
+    function cl() {
+        const element = document.getElementById("web");
+        element.style.color = dt[i]; // меняем цвет текста
+        element.style.fontSize = sizes[i]; // меняем размер текста
+        i++;
+        if (i >= dt.length) i = 0; // сброс индекса
+        setTimeout(cl, 1000);
+    }
+    setTimeout(cl, 1000);
+</script>
+
+    <section id="products">
+        <h2>Наши товары</h2>
+        <div id="filters">
+            <button class="filter-button" data-category="all">Все</button>
+            <button class="filter-button" data-category="engine">Запчасти для двигателя</button>
+            <button class="filter-button" data-category="accessories">Автоаксессуары</button>
+        </div>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Поиск по товарам...">
+            <button id="search-button">Поиск</button>
+        </div>
+        <div class="product" data-name="Двигатель в сборе 16кл" data-price="500000" data-category="engine">
+            <img src="eng16.jpg" alt="Автозапчасть 1">
+            <h3>Двигатель в сборе 16кл</h3>
+            <p>Цена: 500.000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Двигатель в сборе 8кл 1.6 обьем" data-price="400000" data-category="engine">
+            <img src="eng8.jpg" alt="Автозапчасть 1">
+            <h3>Двигатель в сборе 8кл 1.6 обьем</h3>
+            <p>Цена: 400.000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Распредвал для 8кл дв." data-price="15000" data-category="engine">
+            <img src="raspred.jpg" alt="Автозапчасть 1">
+            <h3>Распредвал для 8кл дв.</h3>
+            <p>Цена: 15000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Поршня для 8кл дв." data-price="5000" data-category="engine">
+            <img src="porshen.jpg" alt="Автозапчасть 1">
+            <h3>Поршня для 8кл дв.</h3>
+            <p>Цена: 5000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="ГБЦ для 8кл дв." data-price="12000" data-category="engine">
+            <img src="gbc.jpg" alt="Автозапчасть 1">
+            <h3>ГБЦ для 8кл дв.</h3>
+            <p>Цена: 12000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Коленвал для 8кл дв." data-price="15000" data-category="engine">
+            <img src="kolenval.jpg" alt="Автозапчасть 1">
+            <h3>Коленвал для 8кл дв.</h3>
+            <p>Цена: 15000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="ГБЦ для 16кл дв." data-price="15000" data-category="engine">
+            <img src="gbc16.jpg" alt="Автозапчасть 1">
+            <h3>ГБЦ для 16кл дв.</h3>
+            <p>Цена: 15000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Впускной коллектор для 16кл дв." data-price="10000" data-category="engine">
+            <img src="koll.jpg" alt="Автозапчасть 1">
+            <h3>Впускной коллектор для 16кл дв.</h3>
+            <p>Цена: 10000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Мультируль для Ваз" data-price="40000" data-category="accessories">
+            <img src="rul.jpg" alt="Автозапчасть 2">
+            <h3>Мультируль для Ваз</h3>
+            <p>Цена: 40000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Спойлер для Ваз 2110" data-price="15000" data-category="accessories">
+            <img src="spoi.jpg.crdownload" alt="Автозапчасть 2">
+            <h3>Спойлер для Ваз 2110</h3>
+            <p>Цена: 15000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Ветровики для Ваз 2114" data-price="4000" data-category="accessories">
+            <img src="veter.jpg" alt="Автозапчасть 2">
+            <h3>Ветровики для Ваз 2114</h3>
+            <p>Цена: 4000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Торпедо для Ваз Богдан" data-price="30000" data-category="accessories">
+            <img src="torp.jpg" alt="Автозапчасть 2">
+            <h3>Торпедо для Ваз Богдан</h3>
+            <p>Цена: 30000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Авто Андроид для семейсто Ваз 13-15" data-price="50000" data-category="accessories">
+            <img src="andr.jpg" alt="Автозапчасть 2">
+            <h3>Авто Андроид для семейство Ваз 13-15</h3>
+            <p>Цена: 50000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Титан диски 15 размера" data-price="200000" data-category="accessories">
+            <img src="torus.jpg" alt="Автозапчасть 2">
+            <h3>Титан диски 15 размера</h3>
+            <p>Цена: 200000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Стингер для 8 клапанного двигателя" data-price="40000" data-category="accessories">
+            <img src="stin.jpg" alt="Автозапчасть 2">
+            <h3>Стингер для 8 клапанного двигателя</h3>
+            <p>Цена: 40000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Мультируль для Лада Приора" data-price="60000" data-category="accessories">
+            <img src="perora.jpg" alt="Автозапчасть 2">
+            <h3>Мультируль для Лада Приора</h3>
+            <p>Цена: 60000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Противотуманные фары ЛЭД" data-price="7000" data-category="accessories">
+            <img src="tuman.jpg" alt="Автозапчасть 2">
+            <h3>Противотуманные фары ЛЭД</h3>
+            <p>Цена: 7000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Бамперы Ваз 2114 Спорт" data-price="9000" data-category="accessories">
+            <img src="bamper.jpg" alt="Автозапчасть 2">
+            <h3>Бамперы Ваз 2114 Спорт </h3>
+            <p>Цена: 9000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Ева полики Ваз 2114" data-price="15000" data-category="accessories">
+            <img src="eva.jpg" alt="Автозапчасть 2">
+            <h3>Ева полики Ваз 2114</h3>
+            <p>Цена: 15000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-name="Дверные карты ваз 2114" data-price="15000" data-category="accessories">
+            <img src="karta.jpg" alt="Автозапчасть 2">
+            <h3>Дверные карты ваз 2114</h3>
+            <p>Цена: 15000 tg</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Корзина</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total"></p>
+        <button id="checkout-button">Оформить заказ</button>
+    </section>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы - команда профессионалов, предоставляющих качественные автозапчасти с 2000 года.</p>
+		<p><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Филиалы автотоваров</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Филиалы автотоваров</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Адреса филиалов автотоваров</h1>
+
+<table id="branchesTable">
+    <thead>
+        <tr>
+            <th data-column="city">Город</th>
+            <th data-column="address">Адрес</th>
+            <th data-column="phone">Телефон</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Павлодар</td>
+            <td>ул.Карбышева 54</td>
+            <td>58949569625</td>
+        </tr>
+        <tr>
+            <td>Усть-Каменогорск</td>
+            <td>ул.Пермитина 97/4</td>
+            <td>987612659826</td>
+        </tr>
+        <tr>
+            <td>Астана</td>
+            <td>ул.Кривоноса 36</td>
+            <td>987564123</td>
+        </tr>
+        <tr>
+            <td>Алматы</td>
+            <td>ул.Сатпаева 78/2</td>
+            <td>123456789</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // Функция для сортировки таблицы
+    function sortTable(column, isNumeric = false) {
+        const table = document.getElementById('branchesTable');
+        const rows = Array.from(table.rows).slice(1); // Получаем все строки без заголовков
+        const sortedRows = rows.sort((rowA, rowB) => {
+            const cellA = rowA.cells[column].innerText.trim();
+            const cellB = rowB.cells[column].innerText.trim();
+
+            if (isNumeric) {
+                return parseInt(cellA) - parseInt(cellB);
+            } else {
+                return cellA.localeCompare(cellB);
+            }
+        });
+
+        // Переставляем строки в таблице
+        table.tBodies[0].append(...sortedRows);
+    }
+
+    // Добавление обработчиков событий для заголовков
+    const headers = document.querySelectorAll('th');
+    headers.forEach((header, index) => {
+        const columnType = header.getAttribute('data-column');
+        const isNumeric = columnType === 'phone' ? true : false; // Телефон будет сортироваться как число
+        header.addEventListener('click', () => sortTable(index, isNumeric));
+    });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>

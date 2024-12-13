@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <person>
+        <name>Марат</name>
+        <age>25</age>
+        <city>Актау</city>
+    </person>
+    <person>
+        <name>Макпал</name>
+        <age>30</age>
+        <city>Тараз</city>
+    </person>
+    <person>
+        <name>Алмас</name>
+        <age>28</age>
+        <city>Алматы</city>
+    </person>
+    <person>
+        <name>Арман</name>
+        <age>22</age>
+        <city>Астана</city>
+    </person>
+    <person>
+        <name>Досан</name>
+        <age>32</age>
+        <city>Актау</city>
+    </person>
+    <person>
+        <name>Алишер</name>
+        <age>41</age>
+        <city>Астана</city>
+    </person>
+    <person>
+        <name>Арман</name>
+        <age>23</age>
+        <city>Актау</city>
+    </person>
+    <person>
+        <name>Али</name>
+        <age>31</age>
+        <city>Астана</city>
+    </person>
+    <person>
+        <name>Бекжан</name>
+        <age>19</age>
+        <city>Алматы</city>
+    </person>
+    <person>
+        <name>Гаухар</name>
+        <age>34</age>
+        <city>Тараз</city>
+    </person>
+
+</data>
